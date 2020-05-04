@@ -241,16 +241,19 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition: all $default-speed $default-func;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      // width: 100%;
       height: 2px;
       background-color: $c-light;
-      display: none;
-      left: 0;
+      // display: none;
+      width: 0;
+      right: 0;
+      transition: all $default-speed $default-func;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
@@ -273,6 +276,8 @@
     &.active {
       &::after {
         display: block;
+        left: 0;
+        width: 100%;
       }
     }
 
@@ -284,6 +289,8 @@
       &::after {
         opacity: 1;
         background-color: $c-purple;
+        left: 0;
+        width: 100%;
       }
     }
   }
