@@ -247,10 +247,8 @@
       content: "";
       position: absolute;
       bottom: 0;
-      // width: 100%;
       height: 2px;
       background-color: $c-light;
-      // display: none;
       width: 0;
       right: 0;
       transition: all $default-speed $default-func;
@@ -287,7 +285,6 @@
       outline: none;
 
       &::after {
-        opacity: 1;
         background-color: $c-purple;
         left: 0;
         width: 100%;
