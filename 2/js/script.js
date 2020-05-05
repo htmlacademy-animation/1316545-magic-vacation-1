@@ -10118,13 +10118,11 @@ module.exports = code;
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener(`DOMContentLoaded`, () => {
     document.querySelector(`body`).classList.add(`load`);
   });
 
 });
-
-
 
 /***/ }),
 
