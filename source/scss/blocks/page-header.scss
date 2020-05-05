@@ -37,7 +37,7 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-4rem);
-  transition: all $default-speed $cubic-b-80;
+  transition: all $default-speed $cubic-b;
 
   body.load & {
     opacity: 1;
@@ -186,7 +186,7 @@
   line-height: 1.0418;
   color: $c-light;
   opacity: 0;
-  transition: all $default-speed $cubic-b-80;
+  transition: all $default-speed $cubic-b;
 
   body.load & {
     opacity: 1;
@@ -265,7 +265,7 @@
       background-color: $c-light;
       width: 0;
       right: 0;
-      transition: all $default-speed $cubic-b-80;
+      transition: all $default-speed $cubic-b;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
