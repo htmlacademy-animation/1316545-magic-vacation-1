@@ -49,7 +49,11 @@
   background-color: $c-light;
   z-index: 1;
   transform: translateY(100%);
-  transition: translate $default-speed ease-in;
+  transition: transform $default-speed $cubic-b-80;
+
+  body.load & {
+    transform: none;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;

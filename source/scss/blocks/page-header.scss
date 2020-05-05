@@ -37,7 +37,7 @@
   color: $c-light;
   opacity: 0;
   transform: translateX(-4rem);
-  transition: all $default-speed ease-in;
+  transition: all $default-speed $cubic-b-80;
 
   body.load & {
     opacity: 1;
@@ -186,7 +186,7 @@
   line-height: 1.0418;
   color: $c-light;
   opacity: 0;
-  transition: all $default-speed*2 ease-in;
+  transition: all $default-speed $cubic-b-80;
 
   body.load & {
     opacity: 1;
@@ -265,7 +265,7 @@
       background-color: $c-light;
       width: 0;
       right: 0;
-      transition: all $default-speed ease;
+      transition: all $default-speed $cubic-b-80;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
@@ -285,7 +285,7 @@
       }
     }
 
-    &.active {
+    body.load &.active {
       &::after {
         display: block;
         left: 0;
@@ -309,6 +309,12 @@
 
 .page-header__social {
   margin-left: 4.8rem;
+  transform: scale(0);
+  transition: transform $default-speed cubic-bezier(.5,.87,.71,1.48) $default-speed/2;
+
+  body.load & {
+    transform: scale(1);
+  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
