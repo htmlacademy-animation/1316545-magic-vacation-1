@@ -35,14 +35,6 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
-  opacity: 0;
-  transform: translateX(-4rem);
-  transition: all $default-speed $cubic-b;
-
-  body.load & {
-    opacity: 1;
-    transform: none;
-  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -185,12 +177,6 @@
   font-size: 1.2rem;
   line-height: 1.0418;
   color: $c-light;
-  opacity: 0;
-  transition: all $default-speed $cubic-b;
-
-  body.load & {
-    opacity: 1;
-  }
 
   @media (min-width: $stop-scaling) {
     font-size: 12px;
@@ -255,22 +241,16 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: all $default-speed ease;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
+      width: 100%;
       height: 2px;
       background-color: $c-light;
-      width: 0;
-      right: 0;
-      transition: all $default-speed $cubic-b;
-
-      @media (min-width: $stop-scaling) {
-        left: -5px;
-        right: -5px;
-      }
+      display: none;
+      left: 0;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -285,11 +265,9 @@
       }
     }
 
-    body.load &.active {
+    &.active {
       &::after {
         display: block;
-        left: 0;
-        width: 100%;
       }
     }
 
@@ -299,9 +277,8 @@
       outline: none;
 
       &::after {
+        opacity: 1;
         background-color: $c-purple;
-        left: 0;
-        width: 100%;
       }
     }
   }
@@ -309,12 +286,6 @@
 
 .page-header__social {
   margin-left: 4.8rem;
-  transform: scale(0);
-  transition: transform $default-speed cubic-bezier(.5,.87,.71,1.48) $default-speed/2;
-
-  body.load & {
-    transform: scale(1);
-  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 48px;
