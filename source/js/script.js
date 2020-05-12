@@ -9,7 +9,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import animations from './modules/animations';
-import apData from './modules/data.js';
+import getData from './modules/data.js';
 import changeScreen from './modules/change-screen.js';
 
 // init modules
@@ -26,4 +26,5 @@ window.fullPageScroll = new FullPageScroll();
 window.fullPageScroll.init();
 
 animations();
+window.apData = getData();
 changeScreen();
