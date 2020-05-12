@@ -9,6 +9,8 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import animations from './modules/animations';
+import apData from './modules/data.js';
+import changeScreen from './modules/change-screen.js';
 
 // init modules
 mobileHeight();
@@ -19,7 +21,9 @@ chat();
 result();
 form();
 social();
-animations();
 
-const fullPageScroll = new FullPageScroll();
-fullPageScroll.init();
+window.fullPageScroll = new FullPageScroll();
+window.fullPageScroll.init();
+
+animations();
+changeScreen();

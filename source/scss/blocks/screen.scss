@@ -10,6 +10,7 @@
 
   &--hidden {
     visibility: hidden;
+    min-height: 0;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -361,4 +362,23 @@
 
 .screen--rules {
   background-color: $c-dark;
+}
+
+.screen--fill {
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: $c-dark;
+    z-index: 2;
+  }
+
+  &.fill {
+    &:before {
+      height: 100%;
+      transition: height 400ms ease-out;
+    }
+  }
 }
