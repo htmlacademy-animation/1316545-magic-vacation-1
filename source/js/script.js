@@ -8,8 +8,9 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+
+// добавляю новые модули
 import animations from './modules/animations';
-import getData from './modules/data.js';
 import changeScreen from './modules/change-screen.js';
 
 // init modules
@@ -22,9 +23,10 @@ result();
 form();
 social();
 
+// Объект fullPageScroll становится видимым глобально
 window.fullPageScroll = new FullPageScroll();
 window.fullPageScroll.init();
 
+
 animations();
-window.apData = getData();
 changeScreen();
