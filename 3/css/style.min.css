@@ -2856,18 +2856,19 @@ img {
 .screen--rules {
   background-color: #5f458c; }
 
-.screen--fill:before {
+.bg-screen {
   position: absolute;
   content: '';
   bottom: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
   background-color: #5f458c;
   z-index: 2; }
-
-.screen--fill.fill:before {
-  height: 100%;
-  transition: height 400ms ease-out; }
+  .bg-screen.fill {
+    transform: scaleY(1);
+    transition: transform 400ms ease-out; }
 
 .slider {
   position: relative;
