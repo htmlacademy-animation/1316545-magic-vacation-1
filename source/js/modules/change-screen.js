@@ -11,9 +11,9 @@ export default () => {
   const TRANS_DELAY = 310;
 
   // создаю элемент DOM, который будет анимированным фоном
-  var divBg = document.createElement('DIV');
-  divBg.classList.add('bg-screen')
-  document.querySelector('.page-content').prepend(divBg);
+  let divBg = document.createElement(`DIV`);
+  divBg.classList.add(`bg-screen`);
+  document.querySelector(`.page-content`).prepend(divBg);
 
   // переопределяю функцию смены экрана в fullPageScroll,
   // чтобы добавить задержку при смене на нужный экран
@@ -21,19 +21,19 @@ export default () => {
     // по умолчанию задержка 0
     let delay = 0;
     // проверка активного экрана ДО его смены
-    if (OBJ_SCROLL.activeScreen == NUM_SCR) {
+    if (OBJ_SCROLL.activeScreen === NUM_SCR) {
       // добавляю задержку
       delay = TRANS_DELAY;
       // "Включаю" анимацию на элементе-фоне
-      divBg.classList.add('fill');
-    };
+      divBg.classList.add(`fill`);
+    }
     // Собственно смена экрана средствами fullPageScroll
-    setTimeout( () => {
+    setTimeout(() => {
       OBJ_SCROLL.changeVisibilityDisplay();
       OBJ_SCROLL.changeActiveMenuItem();
       OBJ_SCROLL.emitChangeDisplayEvent();
       // "Выключаю" анимацию на элементе-фоне
-      divBg.classList.remove('fill');
+      divBg.classList.remove(`fill`);
     }, delay);
   };
 };
