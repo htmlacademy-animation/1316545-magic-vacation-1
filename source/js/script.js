@@ -8,7 +8,10 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+
+// добавляю новые модули
 import animations from './modules/animations';
+import changeScreen from './modules/change-screen.js';
 
 // init modules
 mobileHeight();
@@ -19,7 +22,11 @@ chat();
 result();
 form();
 social();
-animations();
 
-const fullPageScroll = new FullPageScroll();
-fullPageScroll.init();
+// Объект fullPageScroll становится видимым глобально
+window.fullPageScroll = new FullPageScroll();
+window.fullPageScroll.init();
+
+
+animations();
+changeScreen();
