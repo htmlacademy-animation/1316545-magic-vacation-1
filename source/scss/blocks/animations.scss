@@ -1,0 +1,19 @@
+@keyframes rule_num_appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rule_text_appear {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

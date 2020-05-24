@@ -124,6 +124,7 @@
   padding-left: 6.5rem;
   break-inside: avoid;
 
+
   @media (min-width: $stop-scaling) {
     margin: 0 0 62px;
     padding-top: 6px;
@@ -159,6 +160,7 @@
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
+    animation: rule_num_appear 3s both;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
@@ -179,6 +181,7 @@
 
   p {
     margin: 0;
+    animation: rule_text_appear 3s both;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
