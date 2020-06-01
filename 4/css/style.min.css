@@ -3404,11 +3404,11 @@ img {
 
 .rules__lead {
   transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease-in 0.1s; }
+  opacity: 0; }
   .screen.active .rules__lead {
     opacity: 1;
-    transform: none; }
+    transform: none;
+    transition: all 0.3s ease-in 0.1s; }
 
 .screen.active .rules__item:before {
   animation-name: rule_num_appear;
