@@ -4,11 +4,12 @@
   &__lead {
     transform: translateY(20px);
     opacity: 0;
-    transition: all 0.3s ease-in 0.1s;
-
+    
     .screen.active & {
       opacity: 1;
       transform: none;
+      transition: all 0.3s ease-in 0.1s;
+
     }
   }
 
