@@ -5,7 +5,6 @@
 
   .swiper-wrapper {
     min-height: 100vh;
-    box-sizing: border-box;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(var(--vh, 1vh) * 100);
@@ -18,6 +17,13 @@
   flex-direction: column;
   padding: 14.6rem 4rem 10rem 9.7rem;
   height: auto;
+  box-sizing: border-box;
+  opacity: 0;
+
+  &.swiper-slide-active,
+  &.swiper-slide-next {
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     padding: 146px 40px 100px 97px;
@@ -96,6 +102,21 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transform: translateX($default-dif-x*2);
+  opacity: 0;
+
+
+  .screen--story.active .swiper-slide-active &,
+  .screen--story.active .swiper-slide-next & {
+    opacity: 1;
+    transform: none;
+    transition: all $default-speed ease-out $default-delay*3;
+  }
+
+  .screen--story.active .swiper-slide-next & {
+    transition: all $default-speed*1.2 ease-out $default-delay*4;
+
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

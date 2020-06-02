@@ -1,0 +1,39 @@
+@keyframes rule_num_appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    color: transparent;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+@keyframes rule_text_appear {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rule_btn_appear {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes rule_btn_color {
+  from {
+    color: transparent;
+  }
+  to {
+    color: $c-dark;
+  }
+}
