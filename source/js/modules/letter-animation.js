@@ -17,13 +17,17 @@ export default class AccentTypographyBuild {
     this.prePareText();
   }
 
-  createElement(letter,index) {
+  createElement(letter, index) {
     const span = document.createElement(`span`);
     span.textContent = letter;
     span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
 
     // задержка анимации для последовательности 1-3-2
-    ((index % 3) === 0) ? this._timeOffset += 60 : this._timeOffset -= 30;
+    if ((index % 3) === 0) {
+      this._timeOffset += 60;
+    } else {
+      this._timeOffset -= 30;
+    }
 
     return span;
   }
@@ -32,11 +36,11 @@ export default class AccentTypographyBuild {
     if (!this._element) {
       return;
     }
-    const text = this._element.textContent.trim().split(` `).filter((latter)=>latter !== '');
+    const text = this._element.textContent.trim().split(` `).filter((latter)=>latter !== ``);
 
     const content = text.reduce((fragmentParent, word) => {
-      const wordElement = Array.from(word).reduce((fragment, latter,index) => {
-        fragment.appendChild(this.createElement(latter,index));
+      const wordElement = Array.from(word).reduce((fragment, latter, index) => {
+        fragment.appendChild(this.createElement(latter, index));
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);
@@ -61,6 +65,3 @@ export default class AccentTypographyBuild {
     this._element.classList.remove(this._classForActivate);
   }
 }
-
-
-

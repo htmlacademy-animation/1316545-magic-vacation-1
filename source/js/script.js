@@ -12,7 +12,7 @@ import FullPageScroll from './modules/full-page-scroll';
 // добавляю новые модули
 import animations from './modules/animations';
 import changeScreen from './modules/change-screen.js';
-import AccentTypographyBuild from'./modules/letter-animation.js';
+import AccentTypographyBuild from './modules/letter-animation.js';
 
 
 // init modules
