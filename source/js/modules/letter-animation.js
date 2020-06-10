@@ -1,9 +1,9 @@
 export default class AccentTypographyBuild {
   constructor(
-    elementSelector,
-    timer,
-    classForActivate,
-    property
+      elementSelector,
+      timer,
+      classForActivate,
+      property
   ) {
     this._TIME_SPACE = 100;
 
