@@ -4,7 +4,7 @@
   &__lead {
     transform: translateY(20px);
     opacity: 0;
-    
+
     .screen.active & {
       opacity: 1;
       transform: none;
@@ -104,4 +104,25 @@
       }
     }
   }
+}
+
+.text__word {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: -.15em;
+  margin-bottom: -.3em;
+  line-height: 1.2;
+  padding-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  & > span {
+      transform: translate3d(0, 1.2em, 0);
+      display: inline-block;
+  }
+}
+
+.intro__title.active .text__word > span,
+.intro__date.active .text__word > span {
+    transform: translate3d(0, 0, 0);
 }

@@ -12,6 +12,8 @@ import FullPageScroll from './modules/full-page-scroll';
 // добавляю новые модули
 import animations from './modules/animations';
 import changeScreen from './modules/change-screen.js';
+import AccentTypographyBuild from './modules/letter-animation.js';
+
 
 // init modules
 mobileHeight();
@@ -27,6 +29,16 @@ social();
 window.fullPageScroll = new FullPageScroll();
 window.fullPageScroll.init();
 
-
 animations();
 changeScreen();
+
+const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
+const animationDateLine = new AccentTypographyBuild(`.intro__date`, 500, `active`, `transform`);
+
+setTimeout(()=>{
+  animationTopScreenTextLine.runAnimation();
+}, 500);
+
+setTimeout(()=>{
+  animationDateLine.runAnimation();
+}, 1500);
