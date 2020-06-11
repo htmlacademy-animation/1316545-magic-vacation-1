@@ -37,3 +37,29 @@
     color: $c-dark;
   }
 }
+
+@keyframes slider_control_left_move {
+  0% {
+    transform: translateX(-6rem) rotateZ(-180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slider_control_right_move {
+  0% {
+    transform: translateX(6rem) rotateZ(180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+
