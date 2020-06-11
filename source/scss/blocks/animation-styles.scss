@@ -126,3 +126,23 @@
 .intro__date.active .text__word > span {
     transform: translate3d(0, 0, 0);
 }
+
+.slider__controls {
+  bottom: 2.7rem;
+}
+
+.slider__control {
+  animation-duration: $default-speed;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.5, 0.87, 0.71, 1.48);
+  will-change: transform;
+}
+
+.screen.active .slider__control--prev {
+  animation-name: slider_control_left_move;
+}
+
+.screen.active .slider__control--next {
+  animation-name: slider_control_right_move;
+}
